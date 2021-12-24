@@ -1,3 +1,14 @@
 .headerContainer {
-    background:lightblue;
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-direction:; */
+}
+
+.navLinks {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
