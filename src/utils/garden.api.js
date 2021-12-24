@@ -20,10 +20,4 @@ const removeGarden = (id) => {
   return http.delete(`/garden/${id}`);
 };
 
-export default {
-  getAllGardens,
-  getGarden,
-  createGarden,
-  updateGarden,
-  removeGarden,
-};
+export { getAllGardens, getGarden, createGarden, updateGarden, removeGarden };

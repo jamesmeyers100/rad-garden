@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import { fetchZone } from "../utils/apis";
+import { getAllGardens } from "../utils/garden.api";
 
 const Main = function () {
   const [zipCode, setZipcode] = useState(null);
@@ -28,6 +29,9 @@ const Main = function () {
       <div>
         <h2>Your growing zone: {zone.zone}</h2>
         <h2>Your temperature range: {zone.temperature_range}</h2>
+      </div>
+      <div>
+        <button onClick={() => getAllGardens()}>See Gardens</button>
       </div>
     </div>
   );
