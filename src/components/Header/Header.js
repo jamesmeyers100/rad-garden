@@ -12,7 +12,6 @@ const Header = function () {
         <a>Plants</a>
       </div>
       <div className="weatherContainer">
-          <WeatherWidget />
       </div>
     </div>
   );

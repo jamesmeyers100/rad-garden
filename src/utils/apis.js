@@ -4,13 +4,11 @@ export const fetchZone = async (zip) => {
   return zone;
 };
 
-export const fetchCurrentWeather = async (zip) => {
-  console.log("this is zip", zip);
+export const fetchCurrentWeather = async (zip, setWeather) => {
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+    `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
   );
-  console.log("this is response", response);
   const currentWeather = await response.json();
-  console.log("currentWeather", currentWeather);
+  setWeather(currentWeather);
   return currentWeather;
 };

@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import Header from "../components/Header/Header";
+import WeatherWidget from "../components/WeatherWidget/WeatherWidget";
 import { fetchZone } from "../utils/apis";
 import { getAllGardens } from "../utils/garden.api";
 
 const Main = function () {
   const [zipCode, setZipcode] = useState(null);
   const [zone, setZone] = useState({ zone: "" });
+  const [allGardens, setAllGardens] = useState([]);
 
   const submit = async () => {
     let blerp = await fetchZone(zipCode);
     console.log(blerp);
     setZone(blerp);
+  };
+
+  const getGardenMeta = async () => {
+    let gardens = await getAllGardens();
+    console.log("this is gardens", gardens);
   };
 
   return (
@@ -31,7 +38,10 @@ const Main = function () {
         <h2>Your temperature range: {zone.temperature_range}</h2>
       </div>
       <div>
-        <button onClick={() => getAllGardens()}>See Gardens</button>
+        <button onClick={() => getGardenMeta()}>See Gardens</button>
+      </div>
+      <div>
+        <WeatherWidget />
       </div>
     </div>
   );
