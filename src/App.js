@@ -1,13 +1,21 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";
+import Plant from "./pages/Plants/Plant";
+import Garden from "./pages/Garden/Garden";
+import Account from "./pages/Account/Account";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Main />
-      </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path="/garden" component={<Garden />} />
+          <Route path="/plant" component={<Plant />} />
+          <Route path="/account" component={<Account />} />
+          <Route path="/" element={<Main />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

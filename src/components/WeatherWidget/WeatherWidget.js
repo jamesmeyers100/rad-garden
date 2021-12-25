@@ -3,20 +3,25 @@ import { fetchCurrentWeather } from "../../utils/apis";
 import "./WeatherWidget.css";
 
 const WeatherWidget = () => {
-  const [currentWeather, setCurrentWeather] = useState({ name: "" });
-
+  const [currentWeather, setCurrentWeather] = useState({});
+  const { name } = currentWeather;
+  const temp = currentWeather?.main?.temp;
+  const lat = currentWeather?.coord?.lat;
+  const lon = currentWeather?.coord?.lon;
+  const feels_like = currentWeather?.main?.feels_like;
+  
   useEffect(async () => {
     const current = await fetchCurrentWeather(55407, setCurrentWeather);
     console.log("useEffect", current);
   }, []);
-  const { name, main } = currentWeather;
-  const temp = currentWeather?.main?.temp;
 
   return (
     <div className="weatherWidget">
-      <p>City: {name}</p>
+      <h1>City of {name}</h1>
       <h3>Temp: {temp} degrees F</h3>
-      <h3>Weather: </h3>
+      <h3>Feels Like: {feels_like} degrees F</h3>
+      <h3>Lat: {lat}</h3>
+      <h3>Lon: {lon}</h3>
     </div>
   );
 };
