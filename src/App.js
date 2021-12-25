@@ -4,16 +4,20 @@ import Main from "./pages/Main";
 import Plant from "./pages/Plants/Plant";
 import Garden from "./pages/Garden/Garden";
 import Account from "./pages/Account/Account";
-
+import NoMatch from "./pages/NoMatch/NoMatch";
+import Layout from "./utils/Layout";
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/garden" component={<Garden />} />
-          <Route path="/plant" component={<Plant />} />
-          <Route path="/account" component={<Account />} />
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Main />} />
+            <Route path="garden" element={<Garden />} />
+            <Route path="plants" element={<Plant />} />
+            <Route path="account" element={<Account />} />
+            <Route path="*" element={<NoMatch />} />
+          </Route>
         </Routes>
       </Router>
     </div>

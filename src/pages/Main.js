@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../components/Header/Header";
 import WeatherWidget from "../components/WeatherWidget/WeatherWidget";
 import { fetchZone } from "../utils/apis";
 import { getAllGardens } from "../utils/garden.api";
@@ -22,7 +21,6 @@ const Main = function () {
 
   return (
     <div>
-      <Header />
       <h1>Growing Zone Finder</h1>
       <label> Enter Your Zip Code to Find Your Growing Zone: </label>
       <input
