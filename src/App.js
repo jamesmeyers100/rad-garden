@@ -5,19 +5,18 @@ import Plant from "./pages/Plants/Plant";
 import Garden from "./pages/Garden/Garden";
 import Account from "./pages/Account/Account";
 import NoMatch from "./pages/NoMatch/NoMatch";
-import { Layout } from "./components/Layout/Layout";
-import Secured from "./pages/Secured/Secured";
+import SecureLayout from "./components/SecureLayout/SecureLayout";
+
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<SecureLayout />}>
             <Route index element={<Main />} />
             <Route path="garden" element={<Garden />} />
             <Route path="plants" element={<Plant />} />
             <Route path="account" element={<Account />} />
-            <Route path="secured" element={<Secured />} />
             <Route path="*" element={<NoMatch />} />
           </Route>
         </Routes>

@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
-import Keycloak from 'keycloak-js';
-import { Outlet, Link } from 'react-router-dom';
+import React, { Component } from "react";
+import Keycloak from "keycloak-js";
+import { Outlet, Link } from "react-router-dom";
+import Logout from "../Logout/Logout";
+import LogoutFunc from "../Logout/LogoutFunc";
 
-export class Layout extends Component {
+export class SecureLayout extends Component {
   constructor(props) {
     super(props);
     this.state = { keycloak: null, authenticated: false };
   }
 
   componentDidMount() {
-    const keycloak = Keycloak('/keycloak.json');
-    keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
+    const keycloak = Keycloak("/keycloak.json");
+    keycloak.init({ onLoad: "login-required" }).then((authenticated) => {
       this.setState({ keycloak, authenticated });
     });
   }
@@ -23,6 +25,7 @@ export class Layout extends Component {
             {/* A "layout route" is a good place to put markup you want to
             share across all the pages on your site, like navigation. */}
             <nav>
+              <h1>Rad Garden</h1>
               <ul>
                 <li>
                   <Link to="/">Home</Link>
@@ -37,6 +40,7 @@ export class Layout extends Component {
                   <Link to="/account">Account</Link>
                 </li>
               </ul>
+              {/* <LogoutFunc keycloak={this.state.keycloak} /> */}
             </nav>
 
             <hr />
@@ -54,4 +58,4 @@ export class Layout extends Component {
   }
 }
 
-export default Layout;
+export default SecureLayout;
