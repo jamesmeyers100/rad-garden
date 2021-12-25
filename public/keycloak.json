@@ -1,0 +1,8 @@
+{
+  "realm": "ruby",
+  "auth-server-url": "http://localhost:8080/auth/",
+  "ssl-required": "external",
+  "resource": "rad-garden",
+  "public-client": true,
+  "confidential-port": 0
+}
