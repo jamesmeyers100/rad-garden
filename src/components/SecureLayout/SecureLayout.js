@@ -3,7 +3,7 @@ import Keycloak from "keycloak-js";
 import { Outlet, Link } from "react-router-dom";
 import Logout from "../Logout/Logout";
 import LogoutFunc from "../Logout/LogoutFunc";
-
+import "./SecureLayout.css";
 export class SecureLayout extends Component {
   constructor(props) {
     super(props);
@@ -21,10 +21,10 @@ export class SecureLayout extends Component {
     if (this.state.keycloak) {
       if (this.state.authenticated) {
         return (
-          <div>
+          <div className="container">
             {/* A "layout route" is a good place to put markup you want to
             share across all the pages on your site, like navigation. */}
-            <nav>
+            <nav className="nav">
               <h1>Rad Garden</h1>
               <ul>
                 <li>

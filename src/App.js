@@ -6,6 +6,7 @@ import Garden from "./pages/Garden/Garden";
 import Account from "./pages/Account/Account";
 import NoMatch from "./pages/NoMatch/NoMatch";
 import SecureLayout from "./components/SecureLayout/SecureLayout";
+import "./App.css";
 
 function App() {
   return (

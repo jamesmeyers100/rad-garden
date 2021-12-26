@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding-left: 10px; */
+}
+
+nav ul {
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  width: 30%;
+  margin-top: 5px;
+}

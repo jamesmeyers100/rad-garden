@@ -9,7 +9,7 @@ const WeatherWidget = () => {
   const lat = currentWeather?.coord?.lat;
   const lon = currentWeather?.coord?.lon;
   const feels_like = currentWeather?.main?.feels_like;
-  
+
   useEffect(async () => {
     const current = await fetchCurrentWeather(55407, setCurrentWeather);
     console.log("useEffect", current);

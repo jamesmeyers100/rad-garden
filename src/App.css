@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  height: 40vmin;
+}
+
+button {
+  text-transform: uppercase;
+
+  /* Bootstrap btn styles */
+  padding: 6px 12px;
+  margin-bottom: 0;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0rem;
+  height: 30px;
+}
+
+button:disabled {
+  background-color: lightgray;
+  cursor: default;
+}
+
+input {
+  min-height: 30px;
+  border-radius: 0%;
+  border: 1px grey solid;
+  padding-left: 5px;
+}
+
+/* COLORS */
+/* Background */
+.transparent {
+  background-color: transparent;
+}
+.plum {
+  background-color: #862e50;
+}
+.red {
+  background-color: #b5322e;
+}
+.orange {
+  background-color: #f05a28;
+}
+.gold {
+  background-color: #f7931d;
+}
+.lime {
+  background-color: #bfb93e;
+}
+.grass {
+  background-color: #69a03d;
+}
+.green {
+  background-color: #328d41;
+}
+.teal {
+  background-color: #138e8f;
+}
+.blue {
+  background-color: #006888;
+}
+.lightblue {
+  background-color: #ebf3f6;
+}
+.clay {
+  background-color: #6d503d;
+}
+.brown {
+  background-color: #59381f;
+}
+.grey {
+  background-color: #5c5d5c;
+}
+.soot {
+  background-color: #393636;
+}
+.lightgrey {
+  background-color: #f6f6f6;
+}
+
+/* Text */
+.white-text {
+  color: #fff;
+}
+.red-text {
+  color: #b5322e;
+}
+.plum-text {
+  color: #862e50;
+}
+.teal-text {
+  color: #138e8f;
+}
+.blue-text {
+  color: #006888;
+}
+.gold-text {
+  color: #f7931d;
+}
+.grass-text {
+  color: #69a03d;
+}
+.soot-text {
+  color: #393636;
+}
+.grey-text {
+  color: #5c5d5c;
+}

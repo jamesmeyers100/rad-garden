@@ -1,5 +1,5 @@
 .weatherWidget {
   border: 1pt solid lightslategray;
   padding: 25px;
-  width: fit-content;
+  max-width: fit-content;
 }
