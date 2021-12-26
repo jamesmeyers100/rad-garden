@@ -1,5 +1,5 @@
 const express = require("express");
-const routes = require("./routes/garden");
+const routes = require("./routes/garden.router");
 const bodyParser = require("body-parser");
 
 const dotenv = require("dotenv");
@@ -18,5 +18,8 @@ app.use("/", routes);
 app.listen(PORT, () => {
   console.log(`Server is running.`);
   console.log("this PORTenv", process.env.REACT_APP_PORT);
-  console.log("this PORTenv", process.env.REACT_APP_GARDEN_API_BASE_URL + process.env.REACT_APP_PORT);
+  console.log(
+    "this PORTenv",
+    process.env.REACT_APP_GARDEN_API_BASE_URL + process.env.REACT_APP_PORT
+  );
 });
