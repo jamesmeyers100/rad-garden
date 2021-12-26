@@ -14,9 +14,9 @@ const Main = function () {
     setZone(blerp);
   };
 
-  const getGardenMeta = async () => {
-    let gardens = await getAllGardens();
-    console.log("this is gardens", gardens);
+  const getGardenMeta = () => {
+    getAllGardens();
+    // console.log("this is gardens", gardens);
   };
 
   return (
